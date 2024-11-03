@@ -20,5 +20,5 @@ jobs:
             - name: Build project artifacts
               run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
             - name: Deploy to vercel
-              run: vercel deploy --prebuild --token=${{ secrets.VERCEL_TOKEN }}
+              run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
           
