@@ -1,0 +1,24 @@
+name: Deploy on Vercel
+
+#variables from github
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_TEST }}
+
+on:
+   workflow_dispatch:
+
+jobs:
+   Deploy-Vercel:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Install Vercel CLI
+              run: npm install --global vercel@latest
+            - name: Pull Vercel Environment Information
+              run: vercel pull --yes --environment=development --token=${{ secrets.VERCEL_TOKEN }}
+            - name: Build Project ARTIFACTS
+              run: vercel build --dev --token=${{ secrets.VERCEL_TOKEN }}
+            - name: Deploy Artifact to vercel
+              run: vercel deploy --prebuilt --dev --token=${{ secrets.VERCEL_TOKEN }}
+          
