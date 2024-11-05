@@ -2,33 +2,33 @@ name: CI
 
 on:
   push:
-      branches:
-        - main
+    branches:
+      - main
 
 jobs:
   build:
-      runs-on: ubuntu-latest
-      steps:
-          - name: Checkout Code
-            uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    steps:
+       - name: Checkout Code
+         uses: actions/checkout@v4
 
-          - name: Install Node
-            uses: actions/setup-node@v4
-            with: 
-              node-version: 20.x
+       - name: Install Node
+         uses: actions/setup-node@v4
+         with:
+          node-version: 20.x
 
-          - name: Install dependencies
-            uses: npm install
-           
-          - name: Build project
-            run: npm run build
+       - name: Install Dependencies
+         run: npm install
+
+       - name: Build Project
+         run:  npm run build
+
+       - name: Checkout typescript errors
+         run:  npm i -g typescript &&  tsc
          
-          - name: Checkout typescript errors
-            run: npm i -g typescript && tsc
+       - name: Checkout lint errors
+         run:  npm run eslint
 
-          - name: Checkout lint errors
-            run: npm run eslint
-
-          - name: Launch Unit and Integration test
-            run: npm run test 
-        
+       - name: Launch Unit and Integration test
+         run:  npm run test
+      
