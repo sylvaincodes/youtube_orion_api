@@ -1,17 +1,23 @@
 {
   "name": "youtube_orion_api",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest",
+    "eslint": "eslint"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "jest-environment-jsdom": "^29.7.0",
     "lucide-react": "^0.454.0",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0",
     "next": "14.2.16",
     "react": "^18",
     "react-dom": "^18",
@@ -19,13 +25,23 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@jest/globals": "^29.7.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.16",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.12.0",
+    "jest": "^29.7.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "typescript-eslint": "^8.13.0"
   }
 }
