@@ -12,6 +12,7 @@
     "eslint": "eslint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.7.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "jest-environment-jsdom": "^29.7.0",
@@ -22,7 +23,8 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",

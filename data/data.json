@@ -1,0 +1,13 @@
+[{
+        "template":"auth_token",
+        "token":"eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDIyMkFBQSIsImtpZCI6Imluc18yb1VEMHZkWGRoNzFZdnowVmhIRjl4Y0VEYkoiLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJleHAiOjIwNDYyODMyOTksImlhdCI6MTczMDkyMzI5OSwiaXNzIjoiaHR0cHM6Ly9mdWxsLWdudS0xLmNsZXJrLmFjY291bnRzLmRldiIsImp0aSI6ImY0NmIzYzFlOTRlNTRlMTkyN2UyIiwibmJmIjoxNzMwOTIzMjk0LCJzdWIiOiJ1c2VyXzJvVU9TWTBhUjRDQU4yeGx3MU9NaVhlcmhWOSJ9.s5pKHmyx1YkhAu5Uw8Et1ov80qUP6mmDTVwwyIBL3ezRSeSVRqoNFh66v3tdzXc1S_9bp3zFLhD5KkrLBPN_Pzma1ne-4B3OwlQdsromLG1yrgC1Qso-TVspIj8wBPESfQoTG7amNUQBbN5t5bVaZg_m6ZemjUjPeQUMFWVLKEbqvS_yuLy_Zve7crotgmkTaDSb9xq60PlausU8ivGWfqgO6_JOfGphU8Twr4S6zoLzhk38VdLGEi8HAyElDaZs9ahHETtfhqOczbwKxky4GuYbymrxGT_efem5V7YdTIoo_AWeY5ExpiOwV9_4Bl1jzQDIcEJbEOh5Lgb_pJb6dQ",
+        "user_id":"user_2oUOSY0aR4CAN2xlw1OMiXerhV9"
+},
+
+{
+        "name":"a new brand",
+        
+        "slug": "a-new-slug",
+        "image": "http://localhost:3000/",
+        "user_id":"ysuydsudshjjhsgdj"
+}]
