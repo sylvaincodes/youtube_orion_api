@@ -1,0 +1,1610 @@
+openapi: 3.0.0
+info:
+  description: 'this is API for Orion Store Ecommerce. There are public, authentificated and authorized APIs. <ul> <ol> For Auth APIs  go to [https://orion-api-five.vercel.app/api/public/tokens?template=user_token](https://orion-api-five.vercel.app/api/public/tokens?template=user_token) </ol> <ol> To get authorized token go to  [https://orion-api-five.vercel.app/api/public/tokens?template=admin_token](https://orion-api-five.vercel.app/api/public/tokens?template=admin_token) </ol>'
+  version: 1.0.0
+  title: API for Orion Store Multi Vendor SASS.
+  contact:
+    name: Sylvain Codes
+    url: 'https://www.patreon.com/sylvaincodes'
+    email: sylvaincodeur@gmail.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  termsOfService: 'https://www.patreon.com/sylvaincodes'
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: 'https://orion-api-five.vercel.app/api'
+tags:
+  - name: products
+    description: Public API to retreive Products data
+  - name: brands
+    description: Public API to retreive Brands data
+  - name: categories
+    description: Public API to retreive Categories data
+  - name: pages
+    description: Public API to retreive Categories data
+  - name: newsletters
+    description: Public API to subscribe to newsletters
+  - name: pmethods
+    description: Public API to retreive payments methods
+  - name: slides
+    description: Public API to retreive slides
+  - name: shippings
+    description: Public API to retreive
+  - name: campaigns
+    description: Public API to retreive campaigns
+  - name: addresses
+    description: User API to retreive addresses
+  - name: orders
+    description: Orders API to retreive orders
+  - name: ordersitems
+    description: Order items API to retreive orderitems
+  - name: images
+    description: Images API to retreive images
+  - name: colors
+    description: Color API to retreive colors
+  - name: carts
+    description: Carts API to retreive carts
+  - name: cartitems
+    description: Cartitems items API to retreive cart items
+paths:
+  /public/products:
+    get:
+      tags:
+        - products
+      summary: Find all products published by sellers
+      description: You can access this content without auth.
+      parameters:
+        - name: search
+          in: query
+          description: search a product by name from home page
+          required: false
+          schema:
+            type: string
+        - name: slug
+          in: query
+          description: Find a product by slug
+          required: false
+          schema:
+            type: string
+        - name: _id
+          in: query
+          description: search a product by its _id
+          required: false
+          schema:
+            type: string
+        - name: storeId
+          in: query
+          description: search a product by its store
+          required: false
+          schema:
+            type: string
+        - name: style
+          in: query
+          description: should active filters for ?
+          required: false
+          schema:
+            type: string
+            enum:
+              - shop
+        - name: minPrice
+          in: query
+          description: filter product by min price. make sure to have style filled shop
+          required: false
+          schema:
+            type: number
+            default: 0
+        - name: maxPrice
+          in: query
+          description: filter product by max price. make sure to have style filled shop
+          required: false
+          schema:
+            type: number
+            default: 7000
+        - name: filter
+          in: query
+          description: filter product by choice. make sure to have style filled shop
+          required: false
+          schema:
+            type: string
+            enum:
+              - alphabetic
+              - latest
+              - priceHighToLow
+              - priceLowToHigh
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/brands:
+    get:
+      tags:
+        - brands
+      summary: Find all brands published by admin
+      description: You can access this content without auth.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/reviews:
+    get:
+      tags:
+        - reviews
+      summary: Find all reviews published by admin
+      description: You can access this content without auth.
+      parameters:
+        - name: product
+          in: query
+          description: get review for a product
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/shippings:
+    get:
+      tags:
+        - shippings
+      summary: Find all brands published by admin
+      description: You can access this content without auth.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/slides:
+    get:
+      tags:
+        - slides
+      summary: Find all slides published by admin
+      description: You can access this content without auth.
+      parameters:
+        - name: _id
+          in: query
+          description: search a slide by _id
+          required: false
+          schema:
+            type: string
+        - name: slug
+          in: query
+          description: Find a slide by slug
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/tags:
+    get:
+      tags:
+        - tags
+      summary: Find all tags published by admin
+      description: You can access this content without auth.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/categories:
+    get:
+      tags:
+        - categories
+      summary: Find all categories published by admin
+      description: You can access this content without auth.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/pages:
+    get:
+      tags:
+        - pages
+      summary: Find all pages published by admin
+      description: You can access this content without auth.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/sendemail:
+    post:
+      tags:
+        - newsletters
+      summary: Subscribe to the newsletter
+      description: You can access this content without auth.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - subject
+                - message
+              properties:
+                email:
+                  description: email
+                  type: string
+                subject:
+                  description: subject
+                  type: string
+                message:
+                  description: message
+                  type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/pmethods:
+    get:
+      tags:
+        - pmethods
+      summary: Find all payments methods published by admin
+      description: You can access this content without auth.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /public/campaigns:
+    get:
+      tags:
+        - campaigns
+      summary: Find all campaigns approved by admin
+      description: You can access this content without auth.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+  /user/addresses:
+    get:
+      tags:
+        - addresses
+      summary: Find all addresses published by customer
+      parameters:
+        - name: user_id
+          in: query
+          description: this is the id of user
+          required: true
+          schema:
+            type: string
+      description: This api is protected by clerk auth.
+      security:
+        - bearerAuth:
+            - 'read:addresses'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '401':
+          description: Not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+    post:
+      tags:
+        - addresses
+      summary: Create a new addresses
+      description: This api is protected by clerk auth.
+      requestBody:
+        $ref: '#/components/requestBodies/Address'
+      security:
+        - bearerAuth:
+            - 'write:addresses'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
+        '401':
+          description: Not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+    delete:
+      tags:
+        - addresses
+      summary: Delete a addresses
+      description: This api is protected by clerk auth.
+      parameters:
+        - name: _id
+          in: query
+          description: delete an address
+          required: true
+          schema:
+            type: string
+      security:
+        - bearerAuth:
+            - 'write:addresses'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteResponse'
+        '401':
+          description: Not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+  /user/brands:
+    get:
+      tags:
+        - brands
+      summary: Find one brand  published by admin
+      description: This api is protected by auth.
+      parameters:
+        - name: _id
+          in: query
+          description: this is the id of brand
+          required: false
+          schema:
+            type: string
+      security:
+        - bearerAuth:
+            - 'read:brands'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+components:
+  schemas:
+    Product:
+      type: object
+      description: This is a product model
+      required: # List the required properties here
+        - name
+        - slug
+        - description
+        - category
+        - brand
+        - store
+        - productVariants
+        - images
+        - weight
+        - unit
+        - inventory
+        - sku
+        - user_id
+      properties:
+        featured:
+          type: boolean
+          default: false
+        name:
+          type: string
+          description: product title
+        slug:
+          type: string
+        description:
+          type: string
+        additionnal:
+          type: string
+        specification:
+          type: string
+        category:
+          type: string
+        subCategories:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the object
+        collections:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the object
+        tags:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the
+        brand:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the object
+        reviews:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the object
+        store:
+          type: string
+        productVariants:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the object
+        images:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                description: url of the image
+        price:
+          type: number
+          default: 0
+        discount:
+          type: number
+          default: 0
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        seoTitle:
+          type: string
+        seoDescription:
+          type: string
+        seoSlug:
+          type: string
+        weight:
+          type: number
+          default: 0
+        unit:
+          type: string
+          default: kg
+        inventory:
+          type: string
+          enum:
+            - instock
+            - outstock
+          default: instock
+        sku:
+          type: string
+        user_id:
+          type: string
+        views:
+          type: number
+          default: 0
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+    Brand:
+      type: object
+      required:
+        - name
+        - slug
+        - image
+        - user_id
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+      description: Brand model
+    Category:
+      type: object
+      required:
+        - name
+        - slug
+        - image
+        - user_id
+        - subCategories
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+        subCategories:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the object
+    Page:
+      type: object
+      required:
+        - name
+        - slug
+        - image
+        - user_id
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+      description: Page model
+    Payment:
+      type: object
+      properties:
+        subscription:
+          type: string
+        type:
+          type: string
+        checkout_id:
+          type: string
+        checkout_status:
+          type: string
+        payment_intent:
+          type: object
+          properties:
+            id:
+              type: string
+            amount:
+              type: string
+            amount_received:
+              type: string
+            client_secret:
+              type: string
+            created:
+              type: string
+            currency:
+              type: string
+            shipping:
+              type: object
+              properties:
+                address:
+                  type: object
+                  properties:
+                    city:
+                      type: string
+                    country:
+                      type: string
+                    line1:
+                      type: string
+                    line2:
+                      type: string
+                    postal_code:
+                      type: string
+                    state:
+                      type: string
+        amount_subtotal:
+          type: number
+          default: 0
+        amount_total:
+          type: number
+          default: 0
+        amount_discount:
+          type: number
+          default: 0
+        amount_tax:
+          type: number
+          default: 0
+        amount_shipping:
+          type: number
+          default: 0
+        payment_status:
+          type: string
+          default: 0
+    Newsletter:
+      type: object
+      required:
+        - email
+      properties:
+        email:
+          type: string
+    Pmethod:
+      type: object
+      required:
+        - name
+        - slug
+        - image
+        - user_id
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+      description: Payment method model
+    Tag:
+      type: object
+      required:
+        - name
+        - slug
+        - image
+        - user_id
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+    Slide:
+      type: object
+      required:
+        - name
+        - slug
+        - image
+        - user_id
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+        slideItem:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the object
+    Shipping:
+      type: object
+      description: Shipping store model
+      title: Shipping model
+      required:
+        - name
+        - slug
+        - image
+        - user_id
+        - store
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+        store:
+          type: string
+          x-stoplight:
+            id: 7m99thejlo5ap
+        region:
+          type: array
+          x-stoplight:
+            id: 35qdzt869rvrz
+          items:
+            x-stoplight:
+              id: 77tuura7xmew0
+            type: object
+            properties:
+              _id:
+                type: string
+                x-stoplight:
+                  id: yyrg24jdwqhrz
+                default: all
+        delay:
+          type: number
+          x-stoplight:
+            id: klmxip3g2vqo0
+          default: 0
+        fixed_amount:
+          type: number
+          x-stoplight:
+            id: mqskic01ljjp6
+        fees:
+          type: number
+          x-stoplight:
+            id: yi7gnxwa0zhzn
+          default: 0
+        unit_price_weight:
+          type: number
+          x-stoplight:
+            id: nvxccbmzx37y4
+        price_range_start:
+          type: number
+          x-stoplight:
+            id: rydffe3ro4hgn
+          default: 0
+        price_range_end:
+          type: number
+          x-stoplight:
+            id: ehitws46jj3x5
+          default: 0
+    Campaign:
+      type: object
+      required:
+        - name
+        - slug
+        - description
+        - image
+        - user_id
+      properties:
+        name:
+          type: string
+        title:
+          type: string
+        subtitle:
+          type: string
+        textColor:
+          type: string
+        btn:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        product:
+          type: string
+        slide:
+          type: string
+        store:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+        views:
+          type: number
+          default: null
+        approvedAt:
+          type: string
+    Review:
+      type: object
+      required:
+        - product
+        - rating
+        - review
+      properties:
+        product:
+          type: string
+        store:
+          type: string
+        rating:
+          type: number
+        review:
+          type: string
+        user:
+          type: object
+          properties:
+            _id:
+              type: string
+              description: _id of the object
+            imageUrl:
+              type: string
+              description: _id of the object
+            fullName:
+              type: string
+              description: _id of the object
+        likes:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the user
+      description: Product reviews
+    Address:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - address
+        - city
+        - state
+        - phone
+        - country
+        - zipCode
+        - email
+        - user_id
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        address:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        phone:
+          type: string
+        country:
+          type: string
+        zipCode:
+          type: string
+        email:
+          type: string
+        user_id:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: publish
+      description: Address model
+    Slideitem:
+      type: object
+      required:
+        - name
+        - user_id
+        - slug
+        - slide
+        - product
+        - store
+        - image
+      properties:
+        name:
+          type: string
+        title:
+          type: string
+        subtitle:
+          type: string
+        textColor:
+          type: string
+        btn:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        slide:
+          type: string
+        user_id:
+          type: string
+        product:
+          type: string
+        views:
+          type: number
+          default: 0
+        store:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - approve
+            - reject
+            - archive
+          default: draft
+        approvedAt:
+          type: string
+      description: Slide item model
+    Cart:
+      type: object
+      required:
+        - cartItems
+        - user_id
+      properties:
+        cartItems:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the object
+        subTotal:
+          type: number
+          default: 0
+          format: double
+        status:
+          type: string
+          enum:
+            - draft
+            - abandoned
+            - completed
+          default: draft
+        user_id:
+          type: string
+      description: Cart model
+    CartItem:
+      type: object
+      required:
+        - cart
+        - store
+        - variant
+        - qty
+        - productName
+        - productImage
+      properties:
+        cart:
+          type: string
+        store:
+          type: string
+        variant:
+          type: string
+        qty:
+          type: number
+        productName:
+          type: number
+        productImage:
+          type: number
+      description: Cart items model
+    Collection:
+      type: object
+      required:
+        - name
+        - description
+        - color
+        - slug
+        - image
+        - user_id
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+      description: Collection model
+    Color:
+      type: object
+      required:
+        - name
+        - slug
+        - store
+        - image
+        - user_id
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        store:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        value:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+      description: Color Model
+    Discount:
+      type: object
+      required:
+        - code
+        - startDate
+        - endDate
+        - discount
+        - slug
+        - store
+        - user_id
+      properties:
+        code:
+          type: string
+        startDate:
+          type: string
+        endDate:
+          type: string
+        discount:
+          type: number
+        slug:
+          type: string
+        store:
+          type: string
+        user_id:
+          type: string
+        status:
+          type: string
+          enum:
+            - available
+            - expired
+          default: available
+      description: Discount model
+    Image:
+      type: object
+      required:
+        - url
+        - store
+        - user_id
+      properties:
+        url:
+          type: string
+        store:
+          type: string
+        user_id:
+          type: string
+      description: Image for a store
+    Order:
+      type: object
+      description: 'Order model '
+      required:
+        - pmethod
+        - customer
+        - orderitems
+      properties:
+        subTotal:
+          type: number
+          default: 0
+        pmethod:
+          type: string
+        discountItem:
+          type: string
+        delivered:
+          type: boolean
+          default: false
+        earning:
+          type: number
+          default: 0
+        total:
+          type: number
+          default: 0
+        discount:
+          type: number
+          default: 0
+        shipping:
+          type: number
+          default: 0
+        tax:
+          type: number
+          default: 0
+        customer:
+          type: string
+        status:
+          type: string
+          enum:
+            - pending
+            - processing
+            - onhold
+            - completed
+            - refunded
+            - failed
+          default: pending
+        orderitems:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the object
+    Orderitem:
+      type: object
+      required:
+        - cartItem
+        - order
+        - shipping
+        - store
+        - address
+      properties:
+        delivered:
+          type: boolean
+        earning:
+          type: number
+          default: 0
+        cartItem:
+          type: string
+        order:
+          type: string
+        shipping:
+          type: string
+        shippingAmount:
+          type: number
+          default: 0
+        paidAmount:
+          type: number
+          default: 0
+        store:
+          type: string
+        trackorder:
+          type: string
+        status:
+          type: string
+          enum:
+            - pending
+            - processing
+            - onhold
+            - completed
+            - refunded
+            - failed
+          default: pending
+        address:
+          type: string
+          x-stoplight:
+            id: e3i3c9jfrb8ut
+    Productvariant:
+      type: object
+      required:
+        - productId
+        - name
+        - color
+        - sku
+      properties:
+        productId:
+          type: string
+        name:
+          type: string
+        color:
+          type: string
+        colorImages:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                description: url of the image
+        size:
+          type: string
+        sizeImages:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                description: url of the image
+        weight:
+          type: number
+          default: 0
+        price:
+          type: number
+          default: 0
+        discount:
+          type: number
+          default: 0
+        colorValue:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        inventory:
+          type: string
+          enum:
+            - instock
+            - outstock
+          default: instock
+        sku:
+          type: string
+    Size:
+      type: object
+      required:
+        - name
+        - slug
+        - user_id
+        - store
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        images:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                description: url of the image
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+        store:
+          type: string
+        value:
+          type: string
+      description: Size model
+    Token:
+      type: object
+      required:
+        - template
+        - token
+        - user_id
+      properties:
+        template:
+          type: string
+        token:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        user_id:
+          type: string
+    Trackactivity:
+      type: object
+      required:
+        - trackorder
+        - activity
+        - user_id
+      properties:
+        trackorder:
+          type: string
+        activity:
+          type: string
+        user_id:
+          type: string
+    Trackorder:
+      type: object
+      required:
+        - orderitem
+      properties:
+        orderitem:
+          type: string
+        trackactivity:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the trackactivity
+        status:
+          type: string
+          enum:
+            - open
+            - packaging
+            - onroad
+            - delivered
+            - failed
+          default: open
+    Withdrawal:
+      type: object
+      required:
+        - amount
+        - paypal
+        - store
+      properties:
+        amount:
+          type: number
+        paypal:
+          type: string
+        store:
+          type: string
+        status:
+          type: string
+          enum:
+            - pending
+            - paid
+          default: pending
+    Store:
+      type: object
+      required:
+        - user_id
+        - name
+        - description
+      properties:
+        subscription:
+          type: string
+        user_id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        logo:
+          type: string
+          default: 'https://cdn-icons-png.flaticon.com/128/126/126122.png'
+        status:
+          type: string
+          enum:
+            - online
+            - pending
+            - suspended
+          default: pending
+        products:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                description: _id of the product
+        orderitems:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                description: _id of the order items
+      title: ''
+    Subcat:
+      type: object
+      required:
+        - name
+        - slug
+        - image
+        - category
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+            - publish
+            - archive
+          default: draft
+        category:
+          type: string
+    Subscription:
+      type: object
+      required:
+        - startDate
+        - user_id
+      properties:
+        store:
+          type: string
+        payments:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: _id of the payment
+        status:
+          type: string
+          enum:
+            - active
+            - ended
+            - cancelled
+          default: active
+        endDate:
+          type: string
+        startDate:
+          type: string
+        type:
+          type: string
+          enum:
+            - free
+            - pro
+          default: free
+        user_id:
+          type: string
+    AuthResponse:
+      type: object
+      properties:
+        message:
+          type: string
+        status:
+          type: number
+          enum:
+            - 401
+          default: 401
+    Response:
+      type: object
+      required:
+        - status
+        - data
+      properties:
+        message:
+          type: string
+        status:
+          type: number
+          default: 200
+        success:
+          type: boolean
+          default: true
+        data:
+          type: array
+          items:
+            type: object
+    PostResponse:
+      type: object
+      required:
+        - status
+        - data
+      properties:
+        message:
+          type: string
+        status:
+          type: number
+          default: 200
+        success:
+          type: boolean
+          default: true
+        data:
+          type: object
+    DeleteResponse:
+      type: object
+      properties:
+        message:
+          type: string
+        status:
+          type: number
+          default: 204
+        success:
+          type: boolean
+          default: true
+  securitySchemes:
+    bearerAuth: # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+  requestBodies:
+    Address:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Address'
+      description: Address object that needs to be added to the form
+      required: true

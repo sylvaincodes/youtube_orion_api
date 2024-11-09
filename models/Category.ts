@@ -35,7 +35,7 @@ const schema = new Schema<TypeCategoryModel, CategoryModel>({
     required: true,
   },
 
-  subCategories: [
+  subCategory: [
     {
       type: String,
       required: true,

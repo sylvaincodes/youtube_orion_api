@@ -6,7 +6,7 @@ Watch, learn, do research, Try to  build your own project and DO NOT GIVE UP.
 
 
 
-<img src="./public/assets/images/og.jpg"/>
+<img src="./public/assets/images/og.png"/>
 
 # Learn Backend developement with Nextjs - Full Course.
 
