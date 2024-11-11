@@ -3,10 +3,16 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_TEST }}
 on:
-  workflow_dispatch
+  workflow_run:
+      workflows: ['CI']
+      types:
+        - completed
+
+  workflow_dispatch:
 jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
+    if: ${{  github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Vercel CLI
