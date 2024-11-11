@@ -79,6 +79,10 @@ On the marketplace, multiple vendors market and sell their products through a si
 
 Throughout this course, you will improve your technical backend skill set such as:
 
+- Understanding software development process
+
+- Understanding software developer titles and roles
+
 - Understanding API Principles
 
 - Understanding Nextjs Basics Concepts
