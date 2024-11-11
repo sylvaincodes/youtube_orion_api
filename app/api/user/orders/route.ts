@@ -15,7 +15,7 @@ import Productvariant from "@/models/Productvariant";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   // https://github.com/stripe/stripe-node#configuration
-  apiVersion: "2024-06-20",
+  apiVersion: "2024-10-28.acacia",
 });
 
 export async function GET(request: Request) {

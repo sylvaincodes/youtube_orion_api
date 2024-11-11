@@ -1,9 +1,3 @@
-export const tokenValidationSchema: ZodType<TokenFormData> = z.object({
-  template: z.string(),
-  token: z.string(),
-  user_id: z.string(),
-  status: z.enum(["draft", "publish", "archive"]).optional(),
-});
 import { descriptionFormat, nameFormat, slugFormat } from "@/lib/regex";
 import { z, ZodType } from "zod";
 import {
@@ -31,9 +25,17 @@ import {
   SubcategoryFormData,
   SubscriptionFormData,
   TagFormData,
+  TokenFormData,
   WithdrawalFormData,
 } from "./forms";
 import { TypeColorModel, TypeSizeModel } from "./models";
+
+export const tokenValidationSchema: ZodType<TokenFormData> = z.object({
+  template: z.string(),
+  token: z.string(),
+  user_id: z.string(),
+  status: z.enum(["draft", "publish", "archive"]).optional(),
+});
 
 export const addressValidationSchema: ZodType<AddressFormData> = z.object({
   firstName: z.string().min(5).max(255),
