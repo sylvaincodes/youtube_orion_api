@@ -1,16 +1,16 @@
+<img src="./public/assets/images/og2.png"/>
+
+# Learn Backend developement with Nextjs - Full Course.
+
+The API documentation is available from https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0
+
+
 ## ✔️ Introduction
 
 The main goal of this course is to help developers to build their own app from scratch with NextJs.
 
 Watch, learn, do research, Try to  build your own project and DO NOT GIVE UP.
 
-
-<img src="./public/assets/images/og2.png"/>
-
-
-# Learn Backend developement with Nextjs - Full Course.
-
-The API documentation is available from https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0
 
 
 ## Features 
@@ -53,7 +53,7 @@ On the marketplace, multiple vendors market and sell their products through a si
 
 
 
-## ❓ WHO THIS COURSE FOR
+## ❓ Who this course for
 
 - Beginners in JavaScript
 
@@ -63,7 +63,7 @@ On the marketplace, multiple vendors market and sell their products through a si
 
 
 
-## 📅 COURSE STRUCTURE
+## 📅 Course Structure
 
 - First part :  Building scalable Back-end application for the online store
 
@@ -121,7 +121,7 @@ Throughout this course, you will improve your technical backend skill set such a
 
 
 
-## ✔️ YOUR TASKS IN THIS COURSE
+## ✔️ Your tasks in this course
 
 In this course you'll have tasks to do
 
@@ -137,7 +137,7 @@ Create all routes API. ( refers to API docs, API Sections )
 
 
 
-## ❌ IF YOU HAVE ISSUES: 
+## ❌ If you have issues: 
 
 Get the source code and solve problems at your own.
 
