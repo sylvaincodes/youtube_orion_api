@@ -19,35 +19,38 @@ ORION multi-vendor marketplace platform is standalone e-commerce software that 
 
 On the marketplace, multiple vendors market and sell their products through a single storefront. ORION multi vendor software supports an unlimited number of sellers on one marketplace. It's a perfect solution for online retail sales.
 
-- Ready-to-use Numerous Seller/Vendor Features
 
-Intuitive Seller Dashboard
+✔️ Ready-to-use Numerous Seller/Vendor Features
 
-Unlimited Products Upload
+- Intuitive Seller Dashboard
 
-Unlimited Vendor Accounts
+- Unlimited Products Upload
 
-Vendor Orders
+- Unlimited Vendor Accounts
 
-Vendor Shipments
+- Vendor Orders
 
-Vendor subscribe to premium
+- Vendor Shipments
 
-- Full Marketplace Control & Manage by Admin
+- Vendor subscribe to premium
 
-Approve/disapprove, Edit/Delete Vendor/seller Stores
 
-Mange categories
+✔️Full Marketplace Control & Manage by Admin
 
-Manage subcategories
+- Approve/disapprove, Edit/Delete Vendor/seller Stores
 
-Mange sellers subscription
+- Mange categories
 
-Mange brands
+- Manage subcategories
 
-Manage collections
+- Mange sellers subscription
 
-Manage tags
+- Mange brands
+
+- Manage collections
+
+- Manage tags
+
 
 
 ## ❓ WHO THIS COURSE FOR
@@ -59,15 +62,17 @@ Manage tags
 - Passionate learners 
 
 
+
 ## 📅 COURSE STRUCTURE
 
 - First part :  Building scalable Back-end application for the online store
 
 - Second part: Building Front-end Application including:
 
-Dashboard both admin - sellers
+      Dashboard both admin - sellers
 
-Store Front Website and Customer Dashboard
+      Store Front Website and Customer Dashboard
+
 
 
 ## 🎯 What skills you will learn  ( Backend )
@@ -87,6 +92,7 @@ Throughout this course, you will improve your technical backend skill set such a
 - DevOps CI-CD  with GitHub actions and Vercel
 
 - Documenting API
+
 
 
 ## 🎯 What skills you will learn  ( Front-end ) 
@@ -110,6 +116,7 @@ Throughout this course, you will improve your technical backend skill set such a
 - Testing your application with Cypress.
 
 
+
 ## ✔️ YOUR TASKS IN THIS COURSE
 
 In this course you'll have tasks to do
@@ -120,23 +127,26 @@ i won't actually build all the models schemas and routes API. I'm just going to 
 
 - So here are your tasks 
 
-Create all models schemas
+Create all models schemas ( refers to API docs schemas Sections )
 
-Create all routes API.
+Create all routes API. ( refers to API docs, API Sections )
 
 
-## IF YOU HAVE ISSUES: 
+
+## ❌ IF YOU HAVE ISSUES: 
 
 Get the source code and solve problems at your own.
 
-your can do research using ChatGPT.
+your can do research using [ChatGPT](https://chatgpt.com/).
 
-your can send me a message through [patreon](https://www.patreon.com/sylvaincodes) community section DO NOT DO THAT UNLESS YOU ARE ABOUT TO DIE BY FIXING BUG!.
+you can send me a message through [patreon](https://www.patreon.com/sylvaincodes) community section.
+
 
 
 ## ✅ Prerequisite knowledge
 
 This course assumes knowledge of HTML, CSS, JavaScript.
+
 
 
 ## ✅ System requirements
@@ -148,6 +158,7 @@ Node.js 20.x or later installed.
 Operating systems: macOS, Windows (including WSL), or Linux.
 
 VSCode or another text editor of your choice.
+
 
 
 ## ⌛ TIMESTAMPS
@@ -199,24 +210,29 @@ VSCode or another text editor of your choice.
 04:58:02 What's Next in Part 2 ?
 
 
+
 ## DOWNLOAD ASSETS
 
-- 🟢Online Store Website ORION MULTI VENDOR
 
-Store Website : [Orion Store](https://orion-store-prod.vercel.app)
+🟢Online Store Website ORION MULTI VENDOR
 
-Figma Store Front : [Figma](https://www.figma.com/design/izslJAyRNNXZrlpoVAOCbK/Clicon---eCommerce-Marketplace-Website-Figma-Template-(Community)-(Community)?node-id=305-1334&node-type=frame&t=QYawDoflzX7ixlta-0)
+- Store Website : [Orion Store](https://orion-store-prod.vercel.app)
 
-- 🔴Admin - Seller Dashboard ORION MULTI VENDOR
+- Figma Store Front : [Figma](https://www.figma.com/design/izslJAyRNNXZrlpoVAOCbK/Clicon---eCommerce-Marketplace-Website-Figma-Template-(Community)-(Community)?node-id=305-1334&node-type=frame&t=QYawDoflzX7ixlta-0)
 
-Dashboard Admin - Seller : [Admin-Sellers](https://orion-api-five.vercel.app/)
 
-API document link: [API Docs](https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0#/)
+🔴Admin - Seller Dashboard ORION MULTI VENDOR
 
-✖️Additional content ( SOURCE CODE )
+- Dashboard Admin - Seller : [Admin-Sellers](https://orion-api-five.vercel.app/)
 
-Source code Part 1:  back-end : [From github](https://github.com/sylvaincodes/youtube_orion_api)
+- API document link: [API Docs](https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0#/)
 
-Source code Part 2:  front-end : Will be available when the part 2 is released
 
-Full Source code Part 1 and Part 2 : [Patreon](https://www.patreon.com/sylvaincodes)
+
+## ✖️ Additional content ( SOURCE CODE )
+
+- Source code Part 1:  back-end : [From github](https://github.com/sylvaincodes/youtube_orion_api)
+
+- Source code Part 2:  front-end : Will be available when the part 2 is released
+
+- Full Source code Part 1 and Part 2 : [Patreon](https://www.patreon.com/sylvaincodes)
