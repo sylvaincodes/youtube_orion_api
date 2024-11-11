@@ -3,8 +3,8 @@
 # Learn Backend developement with Nextjs - Full Course.
 
 The API documentation is available from https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0
-
 <br/>
+
 ## ✔️ Introduction
 
 The main goal of this course is to help developers to build their own app from scratch with NextJs.
