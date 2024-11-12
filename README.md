@@ -1,19 +1,19 @@
+<img src="./public/assets/images/og2.png"/>
+
+# Learn Backend developement with Nextjs - Full Course.
+
+The API documentation is available from https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0
+<br/>
+
 ## ✔️ Introduction
 
 The main goal of this course is to help developers to build their own app from scratch with NextJs.
 
 Watch, learn, do research, Try to  build your own project and DO NOT GIVE UP.
+<br/>
 
 
-<img src="./public/assets/images/og2.png"/>
-
-
-# Learn Backend developement with Nextjs - Full Course.
-
-The API documentation is available from https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0
-
-
-## Features 
+## 📂 Features 
 
 ORION multi-vendor marketplace platform is standalone e-commerce software that allows you to build multi vendor marketplaces.
 
@@ -51,9 +51,10 @@ On the marketplace, multiple vendors market and sell their products through a si
 
 - Manage tags
 
+<br/>
 
 
-## ❓ WHO THIS COURSE FOR
+## ❓ Who this course is for ?
 
 - Beginners in JavaScript
 
@@ -61,9 +62,10 @@ On the marketplace, multiple vendors market and sell their products through a si
 
 - Passionate learners 
 
+<br/>
 
 
-## 📅 COURSE STRUCTURE
+## 📅 Course Structure
 
 - First part :  Building scalable Back-end application for the online store
 
@@ -72,7 +74,7 @@ On the marketplace, multiple vendors market and sell their products through a si
       Dashboard both admin - sellers
 
       Store Front Website and Customer Dashboard
-
+<br/>
 
 
 ## 🎯 What skills you will learn  ( Backend )
@@ -96,7 +98,7 @@ Throughout this course, you will improve your technical backend skill set such a
 - DevOps CI-CD  with GitHub actions and Vercel
 
 - Documenting API
-
+<br/>
 
 
 ## 🎯 What skills you will learn  ( Front-end ) 
@@ -118,10 +120,10 @@ Throughout this course, you will improve your technical backend skill set such a
 - Learning Nextjs SEO Concepts and practices.
 
 - Testing your application with Cypress.
+<br/>
 
 
-
-## ✔️ YOUR TASKS IN THIS COURSE
+## ✔️ Your tasks in this course
 
 In this course you'll have tasks to do
 
@@ -134,23 +136,23 @@ i won't actually build all the models schemas and routes API. I'm just going to 
 Create all models schemas ( refers to API docs schemas Sections )
 
 Create all routes API. ( refers to API docs, API Sections )
+<br/>
 
 
-
-## ❌ IF YOU HAVE ISSUES: 
+## ❌ If you have issues: 
 
 Get the source code and solve problems at your own.
 
 your can do research using [ChatGPT](https://chatgpt.com/).
 
 you can send me a message through [patreon](https://www.patreon.com/sylvaincodes) community section.
-
+<br/>
 
 
 ## ✅ Prerequisite knowledge
 
 This course assumes knowledge of HTML, CSS, JavaScript.
-
+<br/>
 
 
 ## ✅ System requirements
@@ -162,10 +164,10 @@ Node.js 20.x or later installed.
 Operating systems: macOS, Windows (including WSL), or Linux.
 
 VSCode or another text editor of your choice.
+<br/>
 
 
-
-## ⌛ TIMESTAMPS
+## ⌛ Timestamps
 
 00:00:00 Intro
 
@@ -212,11 +214,10 @@ VSCode or another text editor of your choice.
 04:31:29 Document your API
 
 04:58:02 What's Next in Part 2 ?
-
+<br/>
 
 
 ## DOWNLOAD ASSETS
-
 
 🟢Online Store Website ORION MULTI VENDOR
 
@@ -225,12 +226,13 @@ VSCode or another text editor of your choice.
 - Figma Store Front : [Figma](https://www.figma.com/design/izslJAyRNNXZrlpoVAOCbK/Clicon---eCommerce-Marketplace-Website-Figma-Template-(Community)-(Community)?node-id=305-1334&node-type=frame&t=QYawDoflzX7ixlta-0)
 
 
+
 🔴Admin - Seller Dashboard ORION MULTI VENDOR
 
 - Dashboard Admin - Seller : [Admin-Sellers](https://orion-api-five.vercel.app/)
 
 - API document link: [API Docs](https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0#/)
-
+<br/>
 
 
 ## ✖️ Additional content ( SOURCE CODE )
@@ -240,3 +242,4 @@ VSCode or another text editor of your choice.
 - Source code Part 2:  front-end : Will be available when the part 2 is released
 
 - Full Source code Part 1 and Part 2 : [Patreon](https://www.patreon.com/sylvaincodes)
+<br/>
