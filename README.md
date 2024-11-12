@@ -50,6 +50,7 @@ On the marketplace, multiple vendors market and sell their products through a si
 - Manage collections
 
 - Manage tags
+
 <br/>
 
 
@@ -60,6 +61,7 @@ On the marketplace, multiple vendors market and sell their products through a si
 - Web developers
 
 - Passionate learners 
+
 <br/>
 
 
@@ -222,6 +224,7 @@ VSCode or another text editor of your choice.
 - Store Website : [Orion Store](https://orion-store-prod.vercel.app)
 
 - Figma Store Front : [Figma](https://www.figma.com/design/izslJAyRNNXZrlpoVAOCbK/Clicon---eCommerce-Marketplace-Website-Figma-Template-(Community)-(Community)?node-id=305-1334&node-type=frame&t=QYawDoflzX7ixlta-0)
+
 
 
 🔴Admin - Seller Dashboard ORION MULTI VENDOR
