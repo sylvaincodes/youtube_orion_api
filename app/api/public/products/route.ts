@@ -1,4 +1,5 @@
-// @ts-nocheck
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 import { isValidObjectId } from "mongoose";
 import { dbConnect } from "@/lib/dbConnect";
 import Product from "@/models/Product";

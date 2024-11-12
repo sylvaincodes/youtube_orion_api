@@ -50,7 +50,7 @@ export async function POST(request: Request) {
 
   const sendMailPromise = () =>
     new Promise<string>((resolve, reject) => {
-      transport.sendMail(mailOptions, function (err: any) {
+      transport.sendMail(mailOptions, function (err) {
         if (!err) {
           resolve("Email sent");
         } else {
