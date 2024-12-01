@@ -2,8 +2,6 @@
 
 # Learn Backend developement with Nextjs - Full Course.
 
-The API documentation is available from https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0
-<br/>
 
 ## ✔️ Introduction
 
@@ -51,6 +49,11 @@ On the marketplace, multiple vendors market and sell their products through a si
 
 - Manage tags
 
+- Manage sellers Stores
+
+- Manage sellers withdrawals
+
+
 <br/>
 
 
@@ -76,6 +79,126 @@ On the marketplace, multiple vendors market and sell their products through a si
       Store Front Website and Customer Dashboard
 <br/>
 
+## 📅 Code organization and folder structure
+
+The project contains all Next.js App Router pages and layouts, and takes care of the routing.
+
+```
+
+├───.github
+│   └───workflows
+├───app
+│   ├───(auth)
+│   │   ├───sign-in
+│   │   │   └───[[...sign-in]]
+│   │   └───sign-up
+│   │       └───[[...sign-up]]
+│   ├───api
+│   │   ├───admin
+│   │   │   ├───brands
+│   │   │   ├───categories
+│   │   │   ├───collections
+│   │   │   ├───pages
+│   │   │   ├───payments
+│   │   │   ├───pmethods
+│   │   │   ├───shippings
+│   │   │   ├───slideitems
+│   │   │   ├───slides
+│   │   │   ├───stores
+│   │   │   ├───subcategories
+│   │   │   ├───subscriptions
+│   │   │   ├───tags
+│   │   │   ├───tokens
+│   │   │   └───trackactivities
+│   │   ├───public
+│   │   │   ├───brands
+│   │   │   ├───campaigns
+│   │   │   ├───categories
+│   │   │   ├───newsletters
+│   │   │   ├───pages
+│   │   │   ├───pmethods
+│   │   │   ├───products
+│   │   │   ├───reviews
+│   │   │   ├───sendemail
+│   │   │   ├───shippings
+│   │   │   ├───slides
+│   │   │   ├───tags
+│   │   │   └───tokens
+│   │   └───user
+│   │       ├───addresses
+│   │       ├───brands
+│   │       ├───campaigns
+│   │       ├───carts
+│   │       ├───categories
+│   │       ├───collections
+│   │       ├───colors
+│   │       ├───discounts
+│   │       ├───images
+│   │       ├───orderitems
+│   │       ├───orders
+│   │       ├───payments
+│   │       ├───products
+│   │       ├───productvariants
+│   │       ├───reviews
+│   │       ├───shippings
+│   │       ├───sizes
+│   │       ├───stores
+│   │       ├───subcategories
+│   │       ├───subscriptions
+│   │       ├───tags
+│   │       ├───trackorders
+│   │       ├───users
+│   │       └───withdrawals
+│   └───fonts
+├───coverage
+│   └───lcov-report
+├───data
+├───lib
+├───models
+├───public
+│   └───assets
+│       └───images
+├───types
+└───__tests__
+
+```
+
+
+### `.github` **directory**
+
+Github workflows folder that contains every worflow's file for CI-CD
+
+
+### `app/api` **directory**
+
+Any file inside the folder pages/api is mapped to /api/* and will be treated as an API endpoint
+
+### `app/auth` **directory**
+
+This group route is used to organize clerk authentification routes like sign-in and sign-up
+
+
+###  `lib` **directory**
+
+this folder contains all the utility functions. 
+
+
+### `models` **directory**
+
+This folder stores all schemas for mongo db database
+
+
+###  `types` **directory**
+
+all types we are going to create should be stored in that folder
+
+
+###  `_tests_`  **directory**
+
+This is the directory that Jest will use to look up tests.
+
+
+<br/>
 
 ## 🎯 What skills you will learn  ( Backend )
 
@@ -101,7 +224,7 @@ Throughout this course, you will improve your technical backend skill set such a
 <br/>
 
 
-## 🎯 What skills you will learn  ( Front-end ) 
+## 🎯 What skills you will learn  ( Front-end Part 2 ) 
 
 - Learning how to integrate a full figma design from scratch using Tailwind Css and NextJs
 
@@ -111,9 +234,11 @@ Throughout this course, you will improve your technical backend skill set such a
 
 - Learning how to create reusable components with React and NextJs
 
-- Learning how to integrate Restful APIs 
+- Learning how to integrate Restful APIs
 
 - Integrating client side validation with Zod Validator
+
+- Integrating a state management tool like Redux Toolkit
 
 - Learning NextJs Optimizations such as Server Side Rendering (SSR) , Static Side Generation (SSG) , Client Side Rendering (CSR), Incremental Static Regeneration (ISR)
 
@@ -145,7 +270,7 @@ Get the source code and solve problems at your own.
 
 your can do research using [ChatGPT](https://chatgpt.com/).
 
-you can send me a message through [patreon](https://www.patreon.com/sylvaincodes) community section.
+you can send me a message through [Here](https://www.patreon.com/messages?mode=campaign&tab=chats) community section.
 <br/>
 
 
@@ -223,7 +348,7 @@ VSCode or another text editor of your choice.
 
 - Store Website : [Orion Store](https://orion-store-prod.vercel.app)
 
-- Figma Store Front : [Figma](https://www.figma.com/design/izslJAyRNNXZrlpoVAOCbK/Clicon---eCommerce-Marketplace-Website-Figma-Template-(Community)-(Community)?node-id=305-1334&node-type=frame&t=QYawDoflzX7ixlta-0)
+- Figma Store Front : [Figma](https://www.figma.com/design/izslJAyRNNXZrlpoVAOCbK/Orion---eCommerce-Marketplace)
 
 
 
@@ -231,7 +356,7 @@ VSCode or another text editor of your choice.
 
 - Dashboard Admin - Seller : [Admin-Sellers](https://orion-api-five.vercel.app/)
 
-- API document link: [API Docs](https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0#/)
+- API documentation link: [API Docs](https://app.swaggerhub.com/apis-docs/SYLVAINCODEUR/Nextjs/1.0.0#/)
 <br/>
 
 
@@ -241,5 +366,5 @@ VSCode or another text editor of your choice.
 
 - Source code Part 2:  front-end : Will be available when the part 2 is released
 
-- Full Source code Part 1 and Part 2 : [Patreon](https://www.patreon.com/sylvaincodes)
+- Full Source code Part 1 and Part 2 : [Here](https://www.patreon.com/sylvaincodes/shop/download-orion-sass-multi-vendor-source-635862?source=storefront)
 <br/>
