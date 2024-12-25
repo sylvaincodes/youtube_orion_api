@@ -2,8 +2,23 @@ import { clerkClient, clerkMiddleware } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 export default clerkMiddleware(async (auth, req) => {
+  // Handle preflight requests (OPTIONS)
+  if (req.method === "OPTIONS") {
+    return new NextResponse(null, {
+      status: 204,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Max-Age": "86400", // 24 hours cache
+      },
+    });
+  }
+
   //get frontend authentication token from request
   const { isSignedIn } = await clerkClient.authenticateRequest(req);
+
+  const response = NextResponse.next();
 
   //protect user api
   if (req.nextUrl.pathname.startsWith("/api/user")) {
@@ -26,18 +41,16 @@ export default clerkMiddleware(async (auth, req) => {
     if ((await auth()).sessionClaims?.metadata.role !== "admin") {
       return Response.json(
         {
-          message: "You are not authorized as admin",
+          message: "Forbidden!",
         },
         {
-          status: 401,
+          status: 403,
         }
       );
     }
   }
 
   // else you can continue
-  const response = NextResponse.next();
-
   return response;
 });
 

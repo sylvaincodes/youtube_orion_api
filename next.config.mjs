@@ -4,21 +4,21 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/api/:path",
+        // Apply these headers to all routes
+        source: "/api/:path*",
         headers: [
           {
             key: "Access-Control-Allow-Origin",
-            value: "*", //allow every origin
-            // value: "http://localhost:3000" //allow only one origin
+            value: "*",
           },
           {
             key: "Access-Control-Allow-Methods",
-            value: "GET,POST,PUT,DELETE,OPTIONS",
+            value: "GET, POST, PUT, DELETE, OPTIONS",
           },
-
           {
             key: "Access-Control-Allow-Headers",
-            value: "Content-Type, Authorization",
+            value:
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
           },
         ],
       },
