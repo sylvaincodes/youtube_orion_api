@@ -2,7 +2,6 @@ import { dbConnect } from "@/lib/dbConnect";
 import Category from "@/models/Category";
 import { SubcategoryValidationSchema } from "@/types/schemas";
 import { NextResponse } from "next/server";
-import { revalidatePath } from "next/cache";
 import Subcat from "@/models/Subcat";
 
 export async function GET(request: Request) {
@@ -43,16 +42,10 @@ export async function POST(req: Request) {
     // Save data to db
     const data = await new Subcat(body).save();
 
-    //delete the last data cached for this specific url and add this data
-    revalidatePath("/admin/subcategories", "page");
-
     // Add sub category id to category
     if (data) {
-      const newSubcate = {
-        _id: data._id,
-      };
       await Category.findByIdAndUpdate(body.category, {
-        $push: { subCategory: newSubcate },
+        $push: { subCategory: data._id },
       });
     }
 
@@ -92,10 +85,6 @@ export async function PUT(req: Request) {
 
     // Update data to db
     const data = await Subcat.findByIdAndUpdate(_id, body);
-
-    //delete the last data cached for this specific url and add this data
-    revalidatePath("/admin/subcategories", "page");
-    revalidatePath("/admin/subcategories/" + data?._id, "page");
 
     return NextResponse.json(
       { message: "Subcat updated.", data },
