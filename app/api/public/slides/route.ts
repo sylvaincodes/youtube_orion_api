@@ -17,7 +17,7 @@ export async function GET(request: Request) {
     const slug = searchParams.get("slug");
 
     if (_id) {
-      if (isValidObjectId(_id)) {
+      if (!isValidObjectId(_id)) {
         return NextResponse.json(
           { message: "This Id is not valid", success: false },
           { status: 404 }
