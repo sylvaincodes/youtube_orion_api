@@ -3,6 +3,23 @@ import Brand from "@/models/Brand";
 import { brandValidationSchema } from "@/types/schemas";
 import { isValidObjectId } from "mongoose";
 
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const _id = searchParams.get("_id");
+
+  await dbConnect();
+  try {
+    if (_id) {
+      const data = await Brand.findById(_id).lean();
+      return Response.json({ data }, { status: 200 });
+    }
+    const data = await Brand.find().sort({ createdAt: -1 }).lean();
+    return Response.json({ data }, { status: 200 });
+  } catch (err) {
+    return Response.json({ err }, { status: 500 });
+  }
+}
+
 // create brand
 export async function POST(req: Request) {
   try {
