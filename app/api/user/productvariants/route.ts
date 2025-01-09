@@ -39,12 +39,8 @@ export async function POST(req: Request) {
       const data = await new Productvariant(element).save();
       // Add sub product id to product
       if (data) {
-        const newData = {
-          _id: data._id,
-        };
-
         await Product.findByIdAndUpdate(element.productId, {
-          $push: { productVariants: newData },
+          $push: { productVariants: data._id },
         });
       } else {
         return NextResponse.json(

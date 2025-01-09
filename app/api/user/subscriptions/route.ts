@@ -16,7 +16,6 @@ export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const session_id = searchParams.get("session_id");
   const user_id = searchParams.get("user_id");
-
   try {
     if (user_id) {
       const data = await Subscription.findOne({ user_id: user_id })
